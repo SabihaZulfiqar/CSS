@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Buttons</title>
+	<style>
+		html,body{
+  margin: 0;
+  padding: 0;  
+}
+h1{
+  color: #574b90;
+  font-size: 50px;
+  font-family: 'montserrat';
+  text-align: center;
+}
+.container{
+  margin-top:50px;
+  text-align: center;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  height:75px;
+  width: 150px;
+  border: 1px solid #c44569;
+  margin: 20px;
+  padding: 10px 20px;
+  background: none;
+  font-size: 25px;
+  font-family: 'montserrat';
+  cursor: pointer;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn1,.btn2{
+  color: #c44569;
+}
+.btn3,.btn4{
+  color: #ffffff;
+}
+.btn1:hover,.btn2:hover{
+  color: #fff;
+}
+.btn3:hover,.btn4:hover{
+  color: #c44569;
+}
+.button::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background: #c44569;
+  z-index: -1; 
+  transition: 0.8s;
+}
+.btn1::before,.btn3::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.btn2::before,.btn4::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.btn3::before,.btn4::before{
+  height: 180%;
+}
+.btn1:hover::before,.btn2:hover::before{
+  height: 180%;
+}
+.btn3:hover::before,.btn4:hover::before{
+  height: 0%;
+}
+
+	</style>
+</head>
+<body>
+	<h1>Tag # 01 - CSS Hover-Effekte</h1>
+
+	<div class="container">
+	  <div class="button btn1">Schweben Sie</div>
+	  <div class="button btn2">Schweben Sie</div>
+	  <div class="button btn3">Schweben Sie</div>
+	  <div class="button btn4">Schweben Sie</div>
+	</div>
+
+</body>
+</html>
